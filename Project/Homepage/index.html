@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Homepage</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Index</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">Sign in</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#signup">Sign Up</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#whyUs">Why Us</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead d-flex" id="first">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Placements 2018</h1>
+        <h3 class="mb-5">
+          <em>Kick start your career here...</em>
+        </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Sign In/ Sign Up</a>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+    <!-- About -->
+    <section class="content-section bg-light" id="about"  ng-app="myApp" >
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>A single stop for your professional choices!</h2>
+            <p class="lead mb-5">Unleash your interests and find the apt choice, from our team at
+              <a href="http://accolite.com/">Accolite</a>!</p>
+			    <div class="tab-pane active in" id="login"  ng-controller="myCtrl">
+					  
+                      <form class="form-horizontal" action='' method="POST">
+                        <fieldset style="background-color:#00FFFF">
+                          <div id="legend"  ng-init="who=true">
+                            <legend class="">Login As</legend>
+                            <input type="radio" name="who" ng-model="who" ng-value="true">Student</input>
+                            <input type="radio" name="who" ng-model="who" ng-value="false">Admin</input>
+                          </div>    
+                          <div class="control-group">
+                            <!-- Username -->
+                       
+
+					   <label class="control-label"  for="username">Username</label>
+                            <div class="controls">
+                              <input type="text" id="username" ng-model="username" placeholder="" class="input-xlarge">
+                            </div>
+                          </div>
+     
+                          <div class="control-group">
+                            <!-- Password-->
+                            <label class="control-label" for="password">Password</label>
+                            <div class="controls">
+                              <input type="password" id="password" ng-model="password" placeholder="" class="input-xlarge">
+                            </div>
+                          </div>
+							<br/>
+     
+                          <div class="control-group">
+                            <!-- Button -->
+                            <div class="controls">
+                              <button class="btn btn-success" ng-click="login()">Login</button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>                
+                </div>
+				<br/>
+				<h4>New Student here? Sign Up below:</h4>
+				<div class="tab-pane active in" id="signup"  ng-controller="myCtrl2" style="background-color: #FFDAB9">
+					  
+                      <form id="tab">
+                        <label>ID (Username)</label><br/>
+                        <input type="text" value="" class="input-xlarge" ng-model="id"><br/><br/>
+                        <label>Full Name</label><br/>
+                        <input type="text" value="" class="input-xlarge" ng-model="fullname"><br/><br/>
+                        <label>Password</label><br/>
+                        <input type="text" value="" class="input-xlarge" ng-model="password"><br/><br/>
+                        <label>Branch</label><br/>
+                        <input type="text" value="" class="input-xlarge" ng-model="branch"><br/><br/>
+                        <label>Email</label><br/>
+                        <input type="text" value="" class="input-xlarge" ng-model="email"><br/><br/>
+     
+                        <div>
+                          <button class="btn btn-primary" ng-click="signup()">Create Account</button>
+                        </div>
+                      </form>                
+                </div>	
+				
+            <!-- <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+	
+	 <!-- Callout -->
+    <section class="callout" id="whyUs">
+      <div class="container text-center">
+        <h2 class="mx-auto mb-5">We make
+          <em>your</em>
+          dreams come true!</h2>
+		  
+        <a class="btn btn-primary btn-xl" href="#first">Scroll to top!</a>
+      </div>
+    </section>
+
+    
+   
+    <!-- Footer -->
+    <footer class="footer text-center" id="contact">
+      <div class="container">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="#">
+              <i class="icon-social-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="#">
+              <i class="icon-social-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="#">
+              <i class="icon-social-github"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; Mini AU Project</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+
+  </body>
+
+</html>
